@@ -3,6 +3,8 @@ using OOPAssignment;
 
 namespace OOPAssignment
 {
+    #region PART 01: THEORETICAL & FUNDAMENTALS
+
     public class PersonClass
     {
         public string Name { get; set; } = "";
@@ -13,11 +15,29 @@ namespace OOPAssignment
         public string Name { get; set; }
     }
 }
-class Program
+public class BankAccount
+{
+    public string OwnerName;
+    private double balance;
+
+    public BankAccount(string owner)
     {
+        OwnerName = owner;
+        balance = 0;
+    }
+
+    public void Deposit(double amount)
+    {
+        if (amount > 0) balance += amount;
+    }
+
+    public double GetBalance() => balance;
+}
+
+class Program
+{
     static void Main(string[] args)
     {
-        #region PART 01: THEORETICAL & FUNDAMENTALS
 
         #region Question 01: Class vs Struct Behavior
         // Q1: Explain with code example how class and struct behave differently.
@@ -38,8 +58,22 @@ class Program
         Console.WriteLine($"Q1 -> Struct Value Independence: {personStruct1.Name}");
         Console.WriteLine("\n" + new string('-', 70) + "\n");
         #endregion
-        #endregion
-    
+       
+            #region Question 02: Public vs Private Access Modifiers
+            // Q2: Explain the difference between public and private access modifiers with an example.
+            //
+            // EXPLANATION:
+            // - public: Member accessible from anywhere inside or outside defining class/assembly.
+            // - private: Member accessible ONLY inside defining class scope. Protects internal data state (Encapsulation).
 
+            BankAccount account = new BankAccount("Kayn");
+            account.Deposit(500);
+            // account.balance = 1000; // Compile Error: balance field is private
+            Console.WriteLine($"Q2 -> Account Owner: {account.OwnerName}, Balance: {account.GetBalance()}");
+            Console.WriteLine("\n" + new string('-', 70) + "\n");
+            #endregion
+        }
     }
-} 
+
+
+#endregion
