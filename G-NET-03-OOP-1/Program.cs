@@ -85,6 +85,19 @@ class Program
         Console.WriteLine("Q3 -> Class Library steps documented in code comments above.");
         Console.WriteLine("\n" + new string('-', 70) + "\n");
         #endregion
+        #region Question 04: What is a Class Library & Why Use It?
+        // Q4: What is a class library? Why do we use class libraries?
+        //
+        // EXPLANATION:
+        // - What it is: A compiled assembly (.dll) containing reusable classes, interfaces, and methods without an executable entry point.
+        // - Why use it:
+        //   1. Code Reusability: Write logic once, share across Web, Mobile, Console apps.
+        //   2. Maintainability: Modifying logic in library updates all referencing applications.
+        //   3. Separation of Concerns: Decouples business logic from UI/Presentation layer.
+
+        Console.WriteLine("Q4 -> Class Library definition & usage documented in code comments above.");
+        Console.WriteLine("\n" + new string('-', 70) + "\n");
+        #endregion
     }
 }
 
