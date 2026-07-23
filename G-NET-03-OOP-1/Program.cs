@@ -58,8 +58,7 @@ class Program
         Console.WriteLine($"Q1 -> Struct Value Independence: {personStruct1.Name}");
         Console.WriteLine("\n" + new string('-', 70) + "\n");
         #endregion
-       
-            #region Question 02: Public vs Private Access Modifiers
+        #region Question 02: Public vs Private Access Modifiers
             // Q2: Explain the difference between public and private access modifiers with an example.
             //
             // EXPLANATION:
@@ -71,9 +70,23 @@ class Program
             // account.balance = 1000; // Compile Error: balance field is private
             Console.WriteLine($"Q2 -> Account Owner: {account.OwnerName}, Balance: {account.GetBalance()}");
             Console.WriteLine("\n" + new string('-', 70) + "\n");
-            #endregion
-        }
+        #endregion
+        #region Question 03: Steps to Create and Use a Class Library
+        // Q3: Describe the steps to create and use a class library in Visual Studio.
+        //
+        // STEPS:
+        // 1. Open Visual Studio -> Create a new project.
+        // 2. Select "Class Library (.NET Core / .NET Standard)" and click Next.
+        // 3. Name project (e.g., "CinemaLibrary") and click Create.
+        // 4. Add reusable classes/enums and Build project (generates compiled .dll file).
+        // 5. In Console Application -> Right-click Dependencies/References -> Add Project Reference -> Select CinemaLibrary.
+        // 6. Add 'using CinemaLibrary;' directive at top of C# file.
+
+        Console.WriteLine("Q3 -> Class Library steps documented in code comments above.");
+        Console.WriteLine("\n" + new string('-', 70) + "\n");
+        #endregion
     }
+}
 
 
 #endregion
